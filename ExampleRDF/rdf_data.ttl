@@ -1,0 +1,20 @@
+@prefix ex: <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Define Classes
+ex:Person rdf:type rdfs:Class .
+ex:Male rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Person .
+ex:Female rdf:type rdfs:Class ;
+    rdfs:subClassOf ex:Person .
+
+# Define Individuals
+ex:A rdf:type ex:Male .
+ex:B rdf:type ex:Male .
+ex:C rdf:type ex:Female .
+ex:D rdf:type ex:Female .
+
+# Marital Relationships
+ex:A ex:marriedTo ex:C .
+ex:B ex:marriedTo ex:D .
